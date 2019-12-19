@@ -47,6 +47,7 @@ public class Listener extends MouseAdapter implements ActionListener  {
 				e1.printStackTrace();
 			}
 			gui.repaint();
+			pixelReset();
 		}
 		else if(e.getActionCommand().equals("identify")) {
 			knn=new Knn(3);//设置取样3个临近数字
@@ -91,6 +92,8 @@ public class Listener extends MouseAdapter implements ActionListener  {
 			}
 			JOptionPane.showMessageDialog(gui,"预测数字为："+knn.predict());
 			gui.repaint();
+			pixelReset();
+			
 		}
 	}
 	
@@ -109,12 +112,13 @@ public class Listener extends MouseAdapter implements ActionListener  {
 
 
 //每当鼠标重新点击的时候，刷新pixel中储存的数据点
-	public void mousePressed(MouseEvent e) {
+//应该在每一次点击按钮的时候刷新数据
+	/*public void mousePressed(MouseEvent e) {
 		x1 = e.getX();
 		y1 = e.getY();
 		
 		pixelReset();
-	}
+	}*/
 
 
 
