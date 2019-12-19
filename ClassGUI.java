@@ -21,6 +21,7 @@ public class ClassGUI extends JPanel{
 		jf.setDefaultCloseOperation(3);//关闭窗口
 		jf.setSize(500, 600);
 		jf.setLocationRelativeTo(null);//相对于指定组件的位置
+		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		//创建两个按钮
 		JButton button1=new JButton("identify");
